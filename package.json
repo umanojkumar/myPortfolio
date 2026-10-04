@@ -2,7 +2,7 @@
   "name": "myPortfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start --openssl-legacy-provider",
-    "build": "CI=false cross-env react-scripts build --openssl-legacy-provider",
+    "build": "cross-env CI=false react-scripts build --openssl-legacy-provider",
     "test": "react-scripts test --openssl-legacy-provider",
     "eject": "react-scripts eject --openssl-legacy-provider",
     "lint": "eslint .",
