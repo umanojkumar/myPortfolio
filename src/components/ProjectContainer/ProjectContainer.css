@@ -17,6 +17,7 @@
 
 .project__description {
   margin-top: 1em;
+  overflow-wrap: anywhere;
 }
 
 .project__stack {
