@@ -1,23 +1,24 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import LaunchIcon from '@material-ui/icons/Launch'
+import LaunchIcon from '@material-ui/icons/DynamicFeed'
 import './ProjectContainer.css'
 
 const ProjectContainer = ({ project }) => (
   <div className='project'>
+    
 
-    {project.image && (<img
+    {project.image && (<img 
     src={
       project.image.startsWith("http")
         ? project.image
         : `${process.env.PUBLIC_URL}/images/${project.image}`
     }
     alt={`${project.name} screenshot`}
-    style={{ width: '100%', objectFit: 'cover' }}
+    style={{ width: '100%', objectFit: 'contain', height: '200px' }}
     />
     )}
-
-    <h3>{project.name}</h3>
+    
+    <h3 className='project__name'>{project.name}</h3>
 
     <p className='project__description'>{project.description}</p>
     {project.stack && (
@@ -33,6 +34,8 @@ const ProjectContainer = ({ project }) => (
     {project.sourceCode && (
       <a
         href={project.sourceCode}
+        target='_blank'
+        rel='noopener noreferrer'
         aria-label='source code'
         className='link link--icon'
       >
@@ -43,6 +46,8 @@ const ProjectContainer = ({ project }) => (
     {project.livePreview && (
       <a
         href={project.livePreview}
+        target='_blank'
+        rel='noopener noreferrer'
         aria-label='live preview'
         className='link link--icon'
       >

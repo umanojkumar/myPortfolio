@@ -4,7 +4,7 @@ import { about } from '../../portfolio'
 import './About.css'
 
 const About = () => {
-  const { name, role, description, resume, social, picture } = about
+  const { name, role, description, resume, social1, social2, picture } = about
 
   return (
     <div className='about center'>
@@ -34,6 +34,23 @@ const About = () => {
       </div>
 
       <div className='about__contact center'>
+          {social1 && (
+          <>
+            {social1.github && (
+              <a
+                href={social1.github}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='github'
+                className='link link--icon'
+              >
+                <GitHubIcon />
+              </a>
+            )}
+          </>
+        )}
+
+
         {resume && (
           <a href={resume}>
             <span type='button' className='btn btn--outline'>
@@ -42,21 +59,13 @@ const About = () => {
           </a>
         )}
 
-        {social && (
+        {social2 && (
           <>
-            {social.github && (
+            {social2.linkedin && (
               <a
-                href={social.github}
-                aria-label='github'
-                className='link link--icon'
-              >
-                <GitHubIcon />
-              </a>
-            )}
-
-            {social.linkedin && (
-              <a
-                href={social.linkedin}
+                href={social2.linkedin}
+                target='_blank'
+                rel='noopener noreferrer'
                 aria-label='linkedin'
                 className='link link--icon'
               >

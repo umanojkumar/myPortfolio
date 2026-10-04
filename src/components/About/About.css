@@ -13,7 +13,7 @@
 
 .about__desc {
   font-size: 1rem;
-  max-width: 600px;
+  max-width: 735px;
 }
 
 .about__desc,
@@ -44,11 +44,11 @@
 }
 
 .about__picture {
-  width: 180px;
-  height: 180px;
+  width: 300px;
+  height: 300px;
   border-radius: 70%;   /* round profile */
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .about__intro {

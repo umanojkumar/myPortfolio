@@ -1,13 +1,18 @@
 .project {
-  padding: 2em;
-  margin: 0 auto;
+  padding: 1em;
+  margin: 5 auto;
   text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  box-shadow: var(--clr-fg-alt) 0px 10px 10px 5px;
+  transition: transform 0.15 linear;
+  border-radius: 5px;
 }
 
 .project:hover {
-  transform: translateY(-7px);
+  transform:  skew( 0deg, 0deg) scale(1.05);
+}
+
+.project__name  {
+  margin-top: 1em;
 }
 
 .project__description {
@@ -31,3 +36,4 @@
 .project .link--icon {
   margin-left: 0.5em;
 }
+
